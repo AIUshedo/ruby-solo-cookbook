@@ -1,6 +1,12 @@
 ---
 driver:
-  name: vagrant
+  name: ec2
+  region: eu-west-1
+  require_chef_omnibus: true
+  instance_type: t2.micro
+  subnet_id: subnet-027e61c7c677725f5
+  associate_public_ip: true
+  aws_ssh_key_id: DevOpsStudents
 
 provisioner:
   name: chef_solo
