@@ -29,6 +29,5 @@ describe 'ruby::default' do
   it "should upgrade ruby" do
     expect(chef_run).to upgrade_package("ruby")
   end
-
   end
 end
