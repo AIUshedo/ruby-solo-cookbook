@@ -19,15 +19,18 @@ describe 'ruby::default' do
       expect { chef_run }.to_not raise_error
     end
 
-  it "should update all sources" do
-    expect(chef_run).to update_apt_update("update")
-  end
+    it "should update all sources" do
+      expect(chef_run).to update_apt_update("update")
+    end
 
-  it "should install ruby" do
-    expect(chef_run).to install_package("ruby")
-  end
-  it "should upgrade ruby" do
-    expect(chef_run).to upgrade_package("ruby")
-  end
+    it "should install ruby" do
+      expect(chef_run).to install_package("ruby")
+    end
+    it "should upgrade ruby" do
+      expect(chef_run).to upgrade_package("ruby")
+    end
+    it "should upgrade bundler" do
+      expect(chef_run).to upgrade_package("bundler")
+    end
   end
 end

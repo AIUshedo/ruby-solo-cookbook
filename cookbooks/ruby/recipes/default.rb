@@ -20,7 +20,3 @@ end
 package "libpq-dev" do
   action :install
 end
-
-package "bundler" do
-  action :upgrade
-end
